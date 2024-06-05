@@ -23,7 +23,7 @@ jobs:
       run: nuget restore "M Centers 8.0.sln"
 
     - name: Build WPF Application (x64)
-      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64
+      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64 && echo path
       
     - name: Publish Artifact (x64)
       uses: actions/upload-artifact@v3
@@ -47,7 +47,7 @@ jobs:
       run: nuget restore "M Centers 8.0.sln"
 
     - name: Build WPF Application (x86)
-      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild
+      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild && echo path
 
     - name: Publish Artifact (x86)
       uses: actions/upload-artifact@v3
