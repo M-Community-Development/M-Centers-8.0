@@ -11,13 +11,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.1
+      uses: microsoft/setup-msbuild@v2
 
     - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.1.1
+      uses: NuGet/setup-nuget@v2
 
     - name: Restore Packages
       run: nuget restore "M Centers 8.0.sln"
@@ -26,7 +26,7 @@ jobs:
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64
       
     - name: Publish Artifact (x64)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: M-Centers-8.0
         path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x64\Release\
@@ -35,13 +35,13 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.1
+      uses: microsoft/setup-msbuild@v2
 
     - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.1.1
+      uses: NuGet/setup-nuget@v2
 
     - name: Restore Packages
       run: nuget restore "M Centers 8.0.sln"
@@ -50,7 +50,7 @@ jobs:
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild
 
     - name: Publish Artifact (x86)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: M-Centers-8.0
         path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x86\Release\
