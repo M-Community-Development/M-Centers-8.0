@@ -47,7 +47,7 @@ on:
 jobs:
 
   build-x64:
-    runs-on: windows-2019
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -74,7 +74,7 @@ jobs:
         path: Releases/x64/executable
 
   build-x86:
-    runs-on: windows-2019
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
