@@ -1,4 +1,4 @@
-name: .NET Core Desktop
+name: .NET Corek Desktop
 
 on:
   push:
