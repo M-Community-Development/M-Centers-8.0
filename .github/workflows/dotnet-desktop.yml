@@ -25,6 +25,9 @@ jobs:
     - name: Build WPF Application (x64)
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64 /t:Rebuild
 
+    - name: List files in Release Directory
+      run: dir Releases\x64\
+
     - name: Publish Artifact (x64)
       uses: actions/upload-artifact@v3
       with:
