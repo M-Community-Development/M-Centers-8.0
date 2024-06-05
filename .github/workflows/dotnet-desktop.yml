@@ -62,7 +62,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Restore Packages
-      run: nuget restore MCenters/MCenters.sln
+      run: nuget restore MCenters/MCenters.csproj
 
     - name: Build WPF Application (x64)
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64 /t:Rebuild
@@ -89,7 +89,7 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Restore Packages
-      run: nuget restore MCenters/MCenters.sln
+      run: nuget restore MCenters/MCenters.csproj
 
     - name: Build WPF Application (x86)
       run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x86 /t:Rebuild
