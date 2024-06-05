@@ -23,16 +23,13 @@ jobs:
       run: nuget restore "M Centers 8.0.sln"
 
     - name: Build WPF Application (x64)
-      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64 /t:Rebuild
-
-    - name: List files in Release Directory
-      run: dir Releases\x64\
-
+      run: msbuild MCenters/MCenters.csproj /p:Configuration=Release /p:Platform=x64
+      
     - name: Publish Artifact (x64)
       uses: actions/upload-artifact@v3
       with:
         name: wpf-app-x64
-        path: Releases/x64/
+        path: Releases\x64\
 
   build-x86:
     runs-on: windows-latest
@@ -56,4 +53,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: wpf-app-x86
-        path: Releases/x86/
+        path: Releases\x86\
