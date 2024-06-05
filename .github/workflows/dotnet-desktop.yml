@@ -28,8 +28,8 @@ jobs:
     - name: Publish Artifact (x64)
       uses: actions/upload-artifact@v3
       with:
-        name: wpf-app-x64
-        path: Releases\x64\
+        name: M-Centers-8.0
+        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x64\Release\x64\
 
   build-x86:
     runs-on: windows-latest
@@ -52,5 +52,5 @@ jobs:
     - name: Publish Artifact (x86)
       uses: actions/upload-artifact@v3
       with:
-        name: wpf-app-x86
-        path: Releases\x86\
+        name: M-Centers-8.0
+        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x64\Release\x86\
