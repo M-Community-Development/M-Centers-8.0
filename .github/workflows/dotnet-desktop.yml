@@ -29,7 +29,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: M-Centers-8.0
-        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x64\Release\x64\
+        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x64\Release\
 
   build-x86:
     runs-on: windows-latest
@@ -53,4 +53,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: M-Centers-8.0
-        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x64\Release\x86\
+        path: D:\a\M-Centers-8.0\M-Centers-8.0\MCentersLibrary\x86\Release\
